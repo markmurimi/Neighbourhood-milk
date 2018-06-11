@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="stage">
+
+  <div class=" block block-fill-height app-header ">
+    <div class="block-xs-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center" style="text-shadow:#000 2px 2px 15px;">
+            <h1 class="block-title m-y">Get milk with comfort</h1>
+          </div>
+        </div>
+      <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2">
+          {% if request.user.is_authenticated %}
+          <a href="/vendor/" class="btn btn-lg btn-info">Vendor</a>
+          {% endif %}
+
+          {% if request.user.is_authenticated %}
+          <a href="/buyer/" class="btn btn-lg btn-warning">Buyer</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}
