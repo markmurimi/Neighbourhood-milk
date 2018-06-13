@@ -18,7 +18,7 @@
         </div>
         <div class="panel-body">
 
-          <form  action="/accounts/register/" method="post">
+          <form  action="/buyer/accounts/register/" method="post">
             {% csrf_token %}
             {% bootstrap_form form layout='inline' %}
             <div class="form-group">
@@ -28,9 +28,10 @@
             </a>
             </div>
 
-            <input type="hidden" name="next" value="{{next}}">
+            <input type="hidden" name="next" value="/buyer/buyer">
 
           </form>
+         
 
         </div>
 

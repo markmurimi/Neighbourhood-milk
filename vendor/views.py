@@ -10,19 +10,7 @@ from django.db import transaction
 
 # Create your views here.
 def vendor(request):
-  user = User.objects.get(username = request.user.username)
-  profile = Vendor_profile.objects.get(user =user)
-  buyer = Buyer_profile.objects.all()
-  if request.method == 'POST':
-    trip_form = TripPlanForm(request.POST)
-    if trip_form.is_valid():
-      trip_plan= TripPlan(vendor_profile = request.user.vendor_profile, current_location = request.POST['current_location'],destination = request.POST['destination'])
-      trip_plan.save()
-      print('success')
-      return redirect(reverse('vendor:vendor'))
-  else:
-    trip_form = TripPlanForm()
-  return render(request, 'vendor/vendor.html',{"profile": profile, "buyer": buyer, "trip_form":trip_form})
+  return render(request, 'vendor/vendor.html')
 
 @transaction.atomic
 def update_profile(request,username):
