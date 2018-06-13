@@ -7,6 +7,11 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 
+"""import africastalking
+africastalking.initialize(username='sandbox',api_key='03024a821413da2f2db06da882a010378b589e48e0a80de0456c5d0e3fbb9923')
+sms = africastalking.SMS
+res = sms.send(message='hello', recipients=['+254726830125'])
+"""
 # Create your views here.
 def buyer(request):
   user = User.objects.get(username = request.user.username)
