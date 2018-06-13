@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'vendor.apps.VendorConfig',
+    'vendor',
     'buyer',
     'star_ratings',
     'bootstrap3',
