@@ -10,7 +10,7 @@ from django.core.urlresolvers import reverse
 # Create your views here.
 def buyer(request):
   user = User.objects.get(username = request.user.username)
-  profile = buyer_profile.objects.get(user =user)
+  profile = Buyer_profile.objects.get(user =user)
   vendor = Vendor_profile.objects.all()
   return render(request, 'buyer/buyer.html', {"profile": profile, "vendor":vendor})
 

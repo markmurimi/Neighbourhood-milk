@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'vendor',
+    'vendor.apps.VendorConfig',
     'buyer',
     'star_ratings',
     'bootstrap3',
@@ -119,6 +119,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+LOGIN_REDIRECT = 'home'
 
 
 # Static files (CSS, JavaScript, Images)

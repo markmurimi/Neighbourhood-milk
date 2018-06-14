@@ -1,4 +1,4 @@
-#!/home/garvin/Desktop/Neighbourhood-milk/virtual/bin/python3.6
+#!/home/garvin/Desktop/Neighbourhood-milk/virtual/bin/python
 from django.core import management
 
 if __name__ == "__main__":

@@ -34,7 +34,7 @@ def update_profile(request,username):
       user_form.save()
       profile_form.save()
       messages.success(request, ('Your profile was successfully updated!'))
-      return redirect(reverse('vendors:profile', kwargs = {'username': request.user.username}))
+      return redirect(reverse('vendor:profile', kwargs = {'username': request.user.username}))
     else:
       messages.error(request, ('Please correct the error below.'))
 

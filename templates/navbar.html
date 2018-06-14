@@ -2,7 +2,7 @@
   .nav{
     border:0.2px solid #ccc;
     border-width:1px 0;
-   
+
     padding:15px;
 }
 </style>
@@ -19,5 +19,17 @@
     <li><a href="/contact/">Our Story</a></li>
   </ul>
 </div>
+<div id="navbar-main" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav ">
+              {% if request.user.is_authenticated %}
+                  <li><a class="navbar-brand" href="/vendor/">Sign In as a Vendor</a></li>
+                  <li><a class="navbar-brand" href="/buyer/">Sign In as a Buyer</a></li>
+                  <li><a class="navbar-brand" href="/logout"><i class="fa fa-sign-out " aria-hidden="true"></i>logout</a></li>
+              {% else %}
+                  <li><a href="/accounts/login">Login</a></li>
+                  <li><a href="/accounts/register/">Signup</a></li>
+              {% endif %}
+          </ul>
+      </div>
 </nav>
 </body>

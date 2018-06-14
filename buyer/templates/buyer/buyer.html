@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
 
-  <div class="rider">
+  <div class="buyer">
     <div class="row" id="row">
       <div class="col-md-2 side">
         {% if profile.profile_pic %}
@@ -47,17 +47,17 @@
    </div>
                   <div id="map"></div>
                 </div>
-                <div id="drivers" class="tab-pane fade">
+                <div id="vendor" class="tab-pane fade">
                   <h3>Vendors</h3>
                   {% for vendor in vendors%}
                     <h1>
-                      <a href="{% url 'buyer:vendor_profile' vendor.user.id%}">{{driver.user.username}}</a>
+                      <a href="{% url 'buyer:vendor_profile' vendor.user.id%}">{{vendor.user.username}}</a>
                     </h1>
                   {% endfor %}
                 </div>
                 <div id="review" class="tab-pane fade">
                   <h3>comments</h3>
-                  <p>awesome driver.</p>
+                  <p>awesome Vendor.</p>
                 </div>
               </div>
             </div>
