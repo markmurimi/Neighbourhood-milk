@@ -8,11 +8,8 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 
 # Create your views here.
-def buyer(request):
-  user = User.objects.get(username = request.user.username)
-  profile = buyer_profile.objects.get(user =user)
-  vendor = Vendor_profile.objects.all()
-  return render(request, 'buyer/buyer.html', {"profile": profile, "vendor":vendor})
+def welcome(request):
+  return render(request, 'buyer.html')
 
 
 def update_profile(request,username):
@@ -81,3 +78,21 @@ def booking_seat(request, vendor_profile_id):
   elif len(existing_bookings) == trip_plan.vendor_profile.car_capacity:
     return redirect(reverse('buyer:vendor_profile', kwargs={'vendor_profile_id':Vendor_profile.user.id}))
 
+def signup(request):
+    '''
+    View function to display a form for creating a post to a logged in authenticated user
+    '''
+    current_user = request.user
+
+    if request.method == 'POST':
+
+        form = SignUpForm(request.POST, request.FILES)
+
+        if form.is_valid:
+            post = form.save(commit=False)
+            post.user = current_user
+            post.save()
+            return redirect(buyer)
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {"form": form})

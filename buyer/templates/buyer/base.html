@@ -15,12 +15,18 @@
 </head>
 <body>
 
-    {% include "buyer/navbar.html" %}
       {% block content %}
       {% endblock %}
 
 
       {% block scripts %}
+      <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
       <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

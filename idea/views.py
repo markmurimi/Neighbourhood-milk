@@ -5,3 +5,6 @@ def index(request):
 
 def work(request):
   return render(request, 'how-it-works.html')
+
+def welcome(request):
+  return render(request, 'buyer.html')
