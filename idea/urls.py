@@ -22,7 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^$', views.index, name = 'index'),
+    url(r'^work/', views.work, name = 'work'),
     url(r'^logout/$', view.logout, {"next_page": '/'}),
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
     url(r'^vendor/', include('vendor.urls')),

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-from .forms import UserForm,ProfileForm
+from .forms import BuyerForm,ProfileForm, SignUpForm
 from .models import Buyer_profile
 from vendor.models import Vendor_profile,TripPlan,Booking
 from django.contrib.auth.models import User
@@ -18,7 +18,7 @@ def buyer(request):
 def update_profile(request,username):
   user = User.objects.get(username = username)
   if request.method == 'POST':
-    user_form = UserForm(request.POST, instance = request.user)
+    user_form = BuyerForm(request.POST, instance = request.user)
     profile_form = ProfileForm(request.POST, instance =request.user.buyer_profile, files = request.FILES)
     if user_form.is_valid() and profile_form.is_valid():
       print('master')
@@ -30,9 +30,9 @@ def update_profile(request,username):
       messages.error(request, ('Please correct the error below.'))
 
   else:
-    user_form = UserForm(instance = request.user)
+    buyer_form = BuyerForm(instance = request.user)
     profile_form = ProfileForm(instance = request.user.buyer_profile)
-  return render(request, 'buyer/profiles/profile_form.html', {"user_form":user_form, "profile_form":profile_form})
+  return render(request, 'buyer/profiles/profile_form.html', {"buyer_form":user_form, "profile_form":profile_form})
 
 @login_required
 def profile(request, username):
@@ -80,3 +80,4 @@ def booking_seat(request, vendor_profile_id):
 
   elif len(existing_bookings) == trip_plan.vendor_profile.car_capacity:
     return redirect(reverse('buyer:vendor_profile', kwargs={'vendor_profile_id':Vendor_profile.user.id}))
+

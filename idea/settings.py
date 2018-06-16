@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#sj$ed$m9++9xa*@pd3o-q6w)(=x3ia1_^h0g2#l(n$g*2ag-5'
+SECRET_KEY = '#sj$ed$m9++9xahttps://images.pexels.comhttps://images.pexels.com/photos/296884/pexels-photo-296884.jpeg?auto=compress&cs=tinysrgb&h=350/photos/296884/pexels-photo-296884.jpeg?auto=compress&cs=tinysrgb&h=350*@pd3o-q6w)(=x3ia1_^h0g2#l(n$g*2ag-5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
+        'APP_DIRS': True ,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -72,7 +72,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'idea.wsgi.application'
 
 

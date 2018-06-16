@@ -7,6 +7,8 @@ from django.dispatch import receiver
 
 # Create your models here.
 class Buyer_profile(models.Model):
+  username = models.CharField(max_length=30)
+  house_number = models.CharField(max_length = 30)
   user = models.OneToOneField(User, on_delete = models.CASCADE)
   bio = models.TextField(max_length=200, blank =True)
   location = models.CharField(max_length = 50, blank =True)
