@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    .fasts{
+
+border-color: white;
+border-style: solid;
+border-width: 18px;
+border-radius: 5px;
+}
+.button {
+font-family: 'Pacifico', cursive;
+border: none;
+color: #F15A29;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.button1 {
+background-color: white;
+color: #F15A29;
+border: 2px solid #F15A29;
+}
+.container {
+position: relative;
+width: 50%;
+}
+
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .4s;
+background-color: white;
+
+}
+
+.fasts:hover .overlay {
+opacity:0.3;
+}
+
+.text {
+font-family: 'Pacifico', cursive;
+color: black;
+font-size: 60px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+  </style>
+  <body>
+    <div class="container-fluid" style="padding:3%;" >
+        <div class="row">
+            <div  class="col-md-6 bg-1">
+                <div class="fasts">
+                    <img src="/static/images/milk.jpeg"  class="img-responsive" >
+                    <div style="width:670px;height:460px;margin-left:20px;" class="overlay">
+                        <div class="text">Step One.</div>
+                      </div>
+                </div>
+            </div>
+            <div style="background-color:white;border-radius:10px;" class="col-md-6 bg-1">
+                <div id="text1">
+                    <h1 style="font-family: 'Pacifico', cursive;text-decoration:underline;">Step One.</h1>
+                    <h2 style="font-family: 'Song Myung', serif;">The experience of a buyer as the user of the application is worth it given the features of the application and how the process to use the app is quite easy is something to look up for in the usr experience.</h2>
+                    <br/><br/><br/>
+                    <a href="buyer/accounts/register/"><button class="button button1">Sign Up &#8594;</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+{% endblock %}

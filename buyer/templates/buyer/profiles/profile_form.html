@@ -8,7 +8,7 @@
   <div class="row profile-settings">
     <div class="col-xs-12">
       <div class="profile-pic-name">
-        {% if user.buyer_profile.profile_pic %}
+        {% if user.rider_profile.profile_pic %}
           <img class="picture-circle--medium" src="{{ user.userprofile.profile_pic.url }}">
         {% else %}
           <img class="picture-circle--medium" src="{% static 'images/profile_placeholder.jpg' %}">

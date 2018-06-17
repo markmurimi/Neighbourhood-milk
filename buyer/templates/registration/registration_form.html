@@ -1,0 +1,47 @@
+{%extends "registration/base.html"%} {% load bootstrap3 %}
+{% block content %}
+<body style="background-image:url('https://images.pexels.com/photos/1761/wood-tree-bark-english-oak.jpg?auto=compress&cs=tinysrgb&h=350')">
+<div class="container">
+  <div class="row">
+    <!-- Empty div -->
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+            <h2 style="color:white ;font-style:italic;">Already have an account ?<a href="/vendor/accounts/login">Log In</a></h2>
+
+      {% if form.errors %}
+        <p> Some Information Might be Incorrect </p>
+      {% endif %}
+      <div style="margin:-150px;margin-top:40px;background-color:#242426;opacity:0.8;color:white" class="panel panel-default">
+
+        <div class="panel-heading">
+          <h3 class="text-center"><b>Sign Up</b></h3>
+        </div>
+        <div class="panel-body">
+
+          <form  action="/buyer/accounts/register/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form buyer_form layout='inline' %}
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+              <a href="/">
+                <button type="button" class="btn btn-primary" name="button">Back</button>
+            </a>
+            </div>
+
+            <input type="hidden" name="next" value="/buyer/buyer">
+
+          </form>
+         
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- empty div -->
+    <div class="col-md-4"></div>
+  </div>
+  
+</div>
+</body>
+{% endblock %}

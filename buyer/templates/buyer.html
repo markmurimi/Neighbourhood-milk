@@ -1,0 +1,71 @@
+{% extends 'buyer/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+  <div class="buyer">
+    <div class="row" id="row">
+      <div class="col-md-2 side">
+        {% if profile.profile_pic %}
+        <img class="picture-circle" src="{{ profile.profile_pic.url }}">
+        {{profile.bio}}
+        {% else %}
+        <img class="picture-circle" src="{% static 'images/profile_placeholder.jpg' %}">
+        {% endif %} <br>
+        <h1 class="username">{{ user.first_name }}</h1>
+        <hr>
+        <a href="{% url 'buyer:profile' request.user.username%}">Profile</a>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+            <h2 class="text-center">Welcome {{ user.username }} </h2>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Delivery location</a></li>
+                <li><a data-toggle="tab" href="#vendors">Vendors</a></li>
+                <li><a data-toggle="tab" href="#review">Review</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                  <h3>HOME</h3>
+
+   <input id="origin-input" class="controls" type="text"
+       placeholder="Enter an origin location">
+
+   <input id="destination-input" class="controls" type="text"
+       placeholder="Enter a destination location">
+
+   <div id="mode-selector" class="controls">
+     <input type="radio" name="type" id="changemode-walking" checked="checked">
+     <label for="changemode-walking">Walking</label>
+
+     <input type="radio" name="type" id="changemode-transit">
+     <label for="changemode-transit">Transit</label>
+
+     <input type="radio" name="type" id="changemode-driving">
+     <label for="changemode-driving">Driving</label>
+   </div>
+                  <div id="map"></div>
+                </div>
+                <div id="vendor" class="tab-pane fade">
+                  <h3>Vendors</h3>
+                  {% for vendor in vendors%}
+                    <h1>
+                      <a href="{% url 'buyer:vendor_profile' vendor.user.id%}">{{vendor.user.username}}</a>
+                    </h1>
+                  {% endfor %}
+                </div>
+                <div id="review" class="tab-pane fade">
+                  <h3>comments</h3>
+                  <p>awesome Vendor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

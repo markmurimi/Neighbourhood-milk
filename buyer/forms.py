@@ -11,3 +11,8 @@ class ProfileForm(forms.ModelForm):
   class Meta:
     model = Buyer_profile
     fields = ('bio', 'location','profile_pic', 'phone_number')
+
+class SignUpForm(forms.ModelForm):
+  class Meta:
+    model = Buyer_profile
+    fields = ('username','house_number')

@@ -2,11 +2,13 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 from django.dispatch import receiver
-#from vendor.models import Vendor_profile
+# from drivers.models import Driver_profile
 
 
 # Create your models here.
 class Buyer_profile(models.Model):
+  username = models.CharField(max_length=30)
+  house_number = models.CharField(max_length = 30)
   user = models.OneToOneField(User, on_delete = models.CASCADE)
   bio = models.TextField(max_length=200, blank =True)
   location = models.CharField(max_length = 50, blank =True)

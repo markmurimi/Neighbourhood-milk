@@ -15,24 +15,7 @@ class Vendor_profile(models.Model):
     profile_pic = models.ImageField(upload_to = 'profile_pic/', blank=True, null= True)
     current_location = models.CharField(max_length = 10)
     destination = models.CharField(max_length = 30, blank = True, null = True)
-    Free_space =models.PositiveIntegerField(default =0)
-
-
-
-
-    @receiver(post_save, sender = User)
-    def create_user_profile(sender, instance, created, **kwargs):
-        if created:
-            Vendor_profile.objects.create(user=instance)
-
-    @receiver(post_save, sender = User)
-    def save_user_profile(sender,instance, **kwargs):
-        instance.vendor_profile.save()
-
-    @property
-    def profile_pic_url(self):
-        if self.profile_pic and hasattr(self.profile_pic, 'url'):
-            return self.profile_pic.url
+    Free_space = models.PositiveIntegerField(default =0)
 
 class TripPlan(models.Model):
     Vendor_profile = models.ForeignKey(Vendor_profile,on_delete=models.CASCADE )
