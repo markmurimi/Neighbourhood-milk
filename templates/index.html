@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block content %}
+        <head>
+          <title>Bootstrap Example</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        <style>
+          .fasts{
+
+border-color: white;
+border-style: solid;
+border-width: 18px;
+border-radius: 5px;
+}
+.button {
+font-family: 'Pacifico', cursive;
+border: none;
+color: #F15A29;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.button1 {
+background-color: white;
+color: #F15A29;
+border: 2px solid #F15A29;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .4s;
+  background-color: white;
+
+}
+
+.fasts:hover .overlay {
+  opacity:0.3;
+}
+
+.text {
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+        </style>
+        <body style="background-image:url('https://images.pexels.com/photos/301378/pexels-photo-301378.jpeg?auto=compress&cs=tinysrgb&h=350');">
+        <div class="container-fluid" style="margin-top:-1.4%;"> 
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="https://images.pexels.com/photos/250696/pexels-photo-250696.jpeg?auto=compress&cs=tinysrgb&h=350" style="height:650px;width:200vh;">
+              </div>
+              <div class="item">
+                <img src="static/images/maziwa.jpeg"style="height:650px;width:200vh;">
+              </div>
+              <div class="item">
+                <img src="static/images/maziwa.jpeg"style="height:650px;width:200vh;">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div style="background-image: url(https://images.pexels.com/photos/301378/pexels-photo-301378.jpeg?auto=compress&cs=tinysrgb&h=350)" class="container-fluid">
+        <div class="container-fluid" style="padding:3%;" >
+            <div class="row">
+                <div  class="col-md-6 bg-1">
+                    <div class="fasts">
+                        <img src="static/images/buyer.jpg"  class="img-responsive" alt="fastfood">
+                        <div style="width:670px;height:460px;margin-left:20px;" class="overlay">
+                            <div class="text">Buyer.</div>
+                          </div>
+                    </div>
+                </div>
+                <div style="background-color:white;border-radius:10px;" class="col-md-6 bg-1">
+                    <div id="text1">
+                        <h1 style="font-family: 'Pacifico', cursive;text-decoration:underline;">Buyer.</h1>
+                        <h2 style="font-family: 'Song Myung', serif;">The experience of a buyer as the user of the application is worth it given the features of the application and how the process to use the app is quite easy is something to look up for in the usr experience.</h2>
+                        <br/><br/><br/>
+                        <a href="buyer/signup"><button class="button button1">Sign Up &#8594;</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding:3%;" class="container-fluid">
+            <div style="background-color:white;border-radius:10px;padding-bottom:80px;" class="col-md-6 bg-1">
+                <div style="font-family: 'Handlee', Open Sans;" id="text1">
+                    <h1 style="font-family: 'Pacifico', cursive;text-decoration:underline;">Vendor.</h1>
+                    <h2 style="font-family: 'Song Myung', serif;">The experience of a vendor as the user of the application is quite different. We have to confirmif you clearly have the milk for the vendor to gain access to the application and be able to attend to the customer's orders.</h2>
+                    <br/><br/><br/>
+                    <a href="/vendor/accounts/login"><button class="button button1">Sign Up &#8594;</button></a>
+                </div>
+            </div>
+                <div class="col-md-6 bg-1">
+                    <div class="fasts">
+                        <img src="static/images/vendor.jpg"  class="img-responsive" style="display:inline" alt="fastfood" width="" height="">
+                        <div style="width:650px;height:440px;margin-left:15px;" class="overlay">
+                            <div class="text">Vendor.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="padding:3%;background-image:url('https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&h=350')" >
+          <div class="row">
+              <div class="col-md-6 bg-1">
+                  <div class="fasts">
+                      <img src="static/images/packaging.jpg"  class="img-responsive" style="display:inline" alt="fastfood" width="" height="">
+                      <div style="width:670px;height:460px;margin-left:30px;"class="overlay">
+                          <div class="text">Packaging.</div>
+                      </div>
+                  </div>
+              </div>
+              <div style="background-color:white;border-radius:10px;" class="col-md-6 bg-1">
+                  <div id="text1">
+                      <h1 style="font-family: 'Pacifico', cursive;text-decoration:underline;">Packaging.</h1>
+                      <h2 style="font-family: 'Song Myung', serif;">Packaging of the milk is an essential key to the quality of the milk during delivery.Each bottle is charged with milk to ensure the pasturised milk is delivered fresh and of the same quality during packaging.</h2>
+                    <br/><br/><br/>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="padding:3%;padding-top:0%;"class="container-fluid">
+        <h1 style="font-family: 'Pacifico', cursive;color:white;font-size:50px;">Contact Us.</h1>
+      </div>
+        </body>
+{% endblock %}
