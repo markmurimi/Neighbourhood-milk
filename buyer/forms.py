@@ -1,18 +1,13 @@
 from django import forms
-from .models import Buyer_profile
+from .models import Buyer
 from django.contrib.auth.models import User
-
-class BuyerForm(forms.ModelForm):
-  class Meta:
-    model = User
-    fields = ('first_name', 'last_name')
 
 class ProfileForm(forms.ModelForm):
   class Meta:
-    model = Buyer_profile
+    model = Buyer
     fields = ('bio', 'location','profile_pic', 'phone_number')
 
 class SignUpForm(forms.ModelForm):
   class Meta:
-    model = Buyer_profile
+    model = Buyer
     fields = ('username', 'profile_pic', 'phone_number','bio', 'location', 'house_number')

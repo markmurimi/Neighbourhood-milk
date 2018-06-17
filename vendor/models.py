@@ -3,7 +3,7 @@ from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.core.validators import RegexValidator
-from buyer.models import Buyer_profile
+from buyer.models import Buyer
 
 
 # Create your models here.
@@ -23,6 +23,3 @@ class TripPlan(models.Model):
     destination = models.CharField(max_length = 30)
 
 
-class Booking(models.Model):
-    buyer_profile = models.ForeignKey(Buyer_profile,on_delete=models.CASCADE)
-    trip_plan = models.ForeignKey(TripPlan,on_delete=models.CASCADE)

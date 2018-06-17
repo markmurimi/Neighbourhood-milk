@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from .forms import UserForm, VendorProfileForm,TripPlanForm
 from .models import Vendor_profile,TripPlan
-from buyer.models import Buyer_profile
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.urlresolvers import reverse
@@ -43,9 +42,3 @@ def profile(request, username):
 
   return render(request, 'vendor/profiles/profile.html', {"title":title, "user":user, "profile": profile})
 
-
-def buyer_profile(request,buyer_profile_id):
-  user= User.objects.get(id = buyer_profile_id)
-  if user:
-    buyer_profile = buyer_profile.objects.get(user=user)
-  return render(request,'vendor/buyer_profile.html',{"buyer_profile": buyer_profile})

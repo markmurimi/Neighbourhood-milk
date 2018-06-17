@@ -2,9 +2,9 @@
 {% block content %}
 <body style="background-image:url('https://images.pexels.com/photos/884452/pexels-photo-884452.jpeg?auto=compress&cs=tinysrgb&h=350')">
 {% include "navbar2.html" %}
-{% for profileS_item in profiles %}
+{% for profiles_item in profiles %}
     <div class="container">
-        <h1>Welcome {{ profileS_item.bio }}</h1>
+        <h1>Welcome {{ profiles_item.bio }}</h1>
     </div>
 {% empty %}
     <div class="container">
