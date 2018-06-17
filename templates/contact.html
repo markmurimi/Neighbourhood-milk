@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <head>
-    <title>Bootstrap Example</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
@@ -9,5 +9,58 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
+  <body>
+  <!-- Contact Section -->
+<div id="contact-section" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Contact Us</h2>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker"></i>
+        <p>Nairobi,<br>
+          Kenya</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o"></i>
+        <p>info@company.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone"></i>
+        <p> +254 123 456 1234</p>
+      </div>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <h3>Leave us a message</h3>
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</body>
 {%endblock%}
