@@ -1,18 +1,29 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-from .forms import UserForm,ProfileForm, SignUpForm
+from .forms import BuyerForm,ProfileForm, SignUpForm
 from .models import Buyer_profile
 from vendor.models import Vendor_profile,TripPlan,Booking
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.urlresolvers import reverse
+import africastalking
 
 # Create your views here.
-def buyer(request):
-  user = User.objects.get(username = request.user.username)
-  profile = Buyer_profile.objects.get(user =user)
-  vendor = Vendor_profile.objects.all()
-  return render(request, 'buyer/buyer.html', {"profile": profile, "vendor":vendor})
+def welcome(request):
+  return render(request, 'buyer.html')
+
+africastalking.initialize(username='sandbox', api_key='someKey')
+payment = africastalking.Payment
+business = {
+  "currencyCode": "KES",
+  "amount": 6766.88,
+  "destinationChannel": "1212",
+  "destinationAccount": "ABC",
+  "provider": 'Mpesa',
+  "transferType": 'BusinessBuyGoods',
+  "metadata": {}
+}
+res = payment.mobile_b2b(product_name='TestProduct', business=business)
 
 def update_profile(request,username):
   user = User.objects.get(username = username)

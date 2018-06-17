@@ -79,7 +79,7 @@ border: 2px solid #F15A29;
 }
         </style>
         <body style="background-image:url('https://images.pexels.com/photos/301378/pexels-photo-301378.jpeg?auto=compress&cs=tinysrgb&h=350');">
-        <div class="container-fluid" style="margin-top:-1.4%;"> 
+        <div class="container-fluid" style="margin-top:-1.4%;">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -87,7 +87,7 @@ border: 2px solid #F15A29;
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
-        
+
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
@@ -99,7 +99,7 @@ border: 2px solid #F15A29;
               <div class="item">
                 <img src="static/images/maziwa.jpeg"style="height:650px;width:200vh;">
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -164,8 +164,54 @@ border: 2px solid #F15A29;
               </div>
           </div>
       </div>
+      <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+var t = window.driftt = window.drift = window.driftt || [];
+if (!t.init) {
+if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+  var n = Array.prototype.slice.call(arguments);
+  return n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+var i = document.getElementsByTagName("script")[0];
+i.parentNode.insertBefore(o, i);
+};
+}
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('wam2bsfhhgum');
+</script>
+<!-- End of Async Drift Code -->
+      <style>
+      h1 {
+          display: inline-block;
+          float: none;
+          clear: none;
+      }
+
+       a {
+          padding: 6px 10px;
+      }
+      </style>
+<footer>
       <div style="padding:3%;padding-top:0%;"class="container-fluid">
         <h1 style="font-family: 'Pacifico', cursive;color:white;font-size:50px;">Contact Us.</h1>
-      </div>
+        <a href="https://web.facebook.com" class="fa fa-facebook"style="font-size:23px;color:blue"></a>
+        <a href="https://web.twitter.com" class="fa fa-twitter"style="font-size:25px;color:blue"></a>
+        <a href="https://snapchat.com" class="fa fa-snapchat"style="font-size:30px;color:yellow"></a>
+        <a href="https://www.instagram.com" class="fa fa-instagram" style="font-size:35px;color:red"></a>
+        <a href="https://pinterest.com" class="fa fa-pinterest" style="font-size:38px;color:red"></a>
+</div>
+</footer>
         </body>
 {% endblock %}

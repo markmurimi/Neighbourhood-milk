@@ -15,11 +15,4 @@ class Buyer_profile(models.Model):
   phone_number =models.IntegerField(blank = True, null = True)
   profile_pic = models.ImageField(upload_to = 'profile_pic/', blank=True, null= True)
 
-  @receiver(post_save, sender = User)
-  def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-      Buyer_profile.objects.create(user=instance)
 
-  @receiver(post_save, sender = User)
-  def save_user_profile(sender,instance, **kwargs):
-    instance.buyer_profile.save()
