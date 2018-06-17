@@ -15,4 +15,4 @@ class ProfileForm(forms.ModelForm):
 class SignUpForm(forms.ModelForm):
   class Meta:
     model = Buyer_profile
-    fields = ('username', 'profile_pic', 'phone_number', 'house_number')
+    fields = ('username', 'profile_pic', 'phone_number','bio', 'location', 'house_number')

@@ -9,7 +9,8 @@ from django.core.urlresolvers import reverse
 
 # Create your views here.
 def welcome(request):
-  return render(request, 'buyer.html')
+  profiles = Buyer_profile.get_profiles()
+  return render(request, 'buyer.html', {"profiles": profiles})
 
 
 def update_profile(request,username):

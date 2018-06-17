@@ -1,14 +1,10 @@
 {% load static%} 
 {% load bootstrap4 %}
 
-<!-- Styles block -->
-{% block styles %} 
-    <link rel="stylesheet" href="{% static 'css/new-post.css'%}">
-{% endblock %}
 
 <!-- Content block -->
 {% block content %}
-{% include "navbar2.html" %}
+{% include "navbar3.html" %}
 <body style="background-image: url('https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&h=350');color:white;font-size:25px;font-family: 'Song Myung', serif;">
 <div class="container">
 
@@ -18,6 +14,7 @@
             {% csrf_token %} {% bootstrap_form form %}
             <input type="submit" class="btn btn-success btn-lg" value="Sign Up">
         </form>
+        
     </div>
 
 </div>
