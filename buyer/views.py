@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm, SignUpForm
-from .models import Buyer
+from .models import Buyer, Order
 
 def welcome(request):
   profiles = Buyer.get_buyers()
@@ -25,3 +25,4 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {"form": form})
+

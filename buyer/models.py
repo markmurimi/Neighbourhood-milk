@@ -18,6 +18,7 @@ class Buyer(models.Model):
     return profiles
 
 class Order(models.Model):
+  username = models.CharField(max_length=30)
   quantity = models.CharField(max_length = 30)
   house_number = models.CharField(max_length=30)
   location = models.CharField(max_length=30)

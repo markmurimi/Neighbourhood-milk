@@ -7,8 +7,50 @@
         <h1>Welcome {{ profiles_item.bio }}</h1>
     </div>
 {% empty %}
-    <div class="container">
-        <h1>Welcome me</h1>
+<style>
+    .button {
+font-family: 'Pacifico', cursive;
+border: none;
+color: #F15A29;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 25px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.button1 {
+background-color: white;
+color: #F15A29;
+border: 2px solid #F15A29;
+}
+</style>
+    <div style="text-align:center;" class="container">
+        <h1 style="font-family: 'Pacifico', cursive;color:white;text-decoration:underline;">Orders.</h1>
+        <div style="opacity:0.7;"class="well">
+            <h2 style="font-family: 'Song Myung', serif;">Username: Mark</h2>
+            <h2 style="font-family: 'Song Myung', serif;">Quantity:5 Litres</h2>
+            <h2 style="font-family: 'Song Myung', serif;">Location: Nairobi Neighbourhood</h2>
+            <h2 style="font-family: 'Song Myung', serif;">House Number: Block B 404</h2>
+            <h2 style="font-family: 'Song Myung', serif;">Phone Number: 0791751262</h2>
+        </div>
+        <div style="opacity:0.7;"class="well">
+                <h2 style="font-family: 'Song Myung', serif;">Username: Munene</h2>
+                <h2 style="font-family: 'Song Myung', serif;">Quantity:5 Litres</h2>
+                <h2 style="font-family: 'Song Myung', serif;">Location: Nairobi Neighbourhood</h2>
+                <h2 style="font-family: 'Song Myung', serif;">House Number: Block H 496</h2>
+                <h2 style="font-family: 'Song Myung', serif;">Phone Number: 0799831262</h2>
+            </div>
+            <div style="opacity:0.7;"class="well">
+                    <h2>Username: Ian</h2>
+                    <h2>Quantity:7 Litres</h2>
+                    <h2>Location: Nairobi Neighbourhood</h2>
+                    <h2>House Number: Block F 401</h2>
+                    <h2>Phone Number: 07891768262</h2>
+                </div>
     </div>
 {% endfor %}
 </body>

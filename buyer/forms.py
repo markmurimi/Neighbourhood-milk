@@ -1,5 +1,5 @@
 from django import forms
-from .models import Buyer
+from .models import Buyer, Order
 from django.contrib.auth.models import User
 
 class ProfileForm(forms.ModelForm):
@@ -9,5 +9,5 @@ class ProfileForm(forms.ModelForm):
 
 class SignUpForm(forms.ModelForm):
   class Meta:
-    model = Buyer
-    fields = ('username', 'profile_pic', 'phone_number','bio', 'location', 'house_number')
+    model = Order
+    fields = ('username', 'quantity', 'phone_number', 'location', 'house_number')
