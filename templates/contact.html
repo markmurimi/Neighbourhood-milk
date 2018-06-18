@@ -11,12 +11,87 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </head>
+  <style>
+  /* Contact Section */
+#contact-section {
+background-color: #f6f6f6;
+}
+#contact-section h3 {
+font-size: 20px;
+font-weight: 400;
+}
+#contact-section form {
+padding: 30px 0;
+}
+#contact-section i.fa {
+color: #e75700;
+font-size: 16px;
+margin-bottom: 10px;
+}
+label {
+font-size: 12px;
+font-weight: 400;
+font-family: 'Open Sans', sans-serif;
+float: left;
+}
+#contact-section .form-control {
+display: block;
+width: 100%;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 2px;
+-webkit-box-shadow: none;
+box-shadow: none;
+-webkit-transition: none;
+-o-transition: none;
+transition: none;
+}
+#contact-section .form-control:focus {
+border-color: inherit;
+outline: 0;
+-webkit-box-shadow: transparent;
+box-shadow: transparent;
+}
+#contact-section .btn {
+background: transparent;
+border: 2px solid #12dbb2;
+border-radius: 4px;
+padding: 10px 20px;
+margin-top: 20px;
+color: #0dbf9b;
+}
+#contact-section .btn:hover, #contact-section .btn:focus {
+background: #0dbf9b;
+border: 2px solid #0dbf9b;
+color: #fff;
+}
+#contact-section .text-danger {
+color: #cc3300;
+text-align: left;
+}
+.btn:active, .btn.active {
+background-image: none;
+outline: 0;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+outline: none;
+outline-offset: none;
+}
+
+  </style>
   <body>
   <!-- Contact Section -->
 <div id="contact-section" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2  style="font-family: 'Pacifico', cursive;color:black;font-size:50px;">Contact Us</h2>
+      <h2  style="font-family: 'Pacifico', cursive;color:#1cd2f9;font-size:50px;">Contact Us</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
     </div>
@@ -62,5 +137,32 @@
   </div>
 </div>
 </div>
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+!function() {
+var t = window.driftt = window.drift = window.driftt || [];
+if (!t.init) {
+if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+var n = Array.prototype.slice.call(arguments);
+return n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+var i = document.getElementsByTagName("script")[0];
+i.parentNode.insertBefore(o, i);
+};
+}
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('wam2bsfhhgum');
+</script>
+<!-- End of Async Drift Code -->
 </body>
 {%endblock%}
