@@ -19,5 +19,6 @@ class Buyer(models.Model):
 
 class Order(models.Model):
   quantity = models.CharField(max_length = 30)
-  delivery_time = models.CharField(max_length = 30)
-  buyer = models.ForeignKey('Buyer')
+  house_number = models.CharField(max_length=30)
+  location = models.CharField(max_length=30)
+  phone_number = models.CharField(max_length=30)
