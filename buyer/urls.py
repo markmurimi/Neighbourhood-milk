@@ -7,6 +7,9 @@ app_name = 'buyer'
 
 urlpatterns = [
   url(r'^signup/', views.signup, name='signup'),
+  url(r'^ingia/', views.ingia, name='ingia'),
+  url(r'^order/', views.order, name='order'),
+  url(r'^message/', views.message, name='message'),
   url(r'^welcome/',views.welcome, name = 'welcome'),
   url(r'^accounts/', include('registration.backends.simple.urls')),
 ]

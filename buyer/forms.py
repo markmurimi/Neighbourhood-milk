@@ -9,5 +9,15 @@ class ProfileForm(forms.ModelForm):
 
 class SignUpForm(forms.ModelForm):
   class Meta:
+    model = Buyer
+    fields = ('username', 'password', 'phone_number', 'profile_pic', 'bio', 'location', 'house_number')
+
+class OrderForm(forms.ModelForm):
+  class Meta:
     model = Order
-    fields = ('username', 'quantity', 'phone_number', 'location', 'house_number')
+    fields = ('username', 'quantity', 'house_number', 'location', 'phone_number')
+
+class LoginForm(forms.ModelForm):
+  class Meta:
+    model = Buyer
+    fields = ('username', 'password')

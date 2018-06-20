@@ -9,7 +9,7 @@
 <div class="container">
 
     <div class="col-md-8 col-lg-8">
-        <form style="margin:10%;font-size:25px;"action="{% url 'welcome' %}" method="post" enctype="multipart/form-data">
+        <form style="margin:10%;font-size:25px;"action="{% url '' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %} {% bootstrap_form form %}
             <input type="submit" class="btn btn-success btn-lg" value="Order">
         </form>

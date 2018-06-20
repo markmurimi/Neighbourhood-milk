@@ -7,6 +7,7 @@ class Buyer(models.Model):
   bio = models.TextField(max_length=200)
   location = models.CharField(max_length = 50)
   phone_number =models.IntegerField()
+  password = models.CharField(max_length = 40)
   profile_pic = models.ImageField(upload_to = 'Buyers')
 
   def __str__(self):
