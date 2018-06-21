@@ -37,7 +37,7 @@ def ingia(request):
         form = LoginForm(request.POST, request.FILES)
 
         if form.is_valid:
-            post = form.save(commit=False)
+            form.save()
             post.user = current_user
             post.save()
             return redirect(message)

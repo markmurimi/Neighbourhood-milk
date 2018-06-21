@@ -16,3 +16,15 @@ class TripPlanForm(forms.ModelForm):
   class Meta:
     model = TripPlan
     fields = ('current_location','destination',)
+
+
+class LoginForm(forms.ModelForm):
+  class Meta:
+    model = Vendor_profile
+    fields = ('username','password',)
+
+
+class SignupForm(forms.ModelForm):
+  class Meta:
+    model = Vendor_profile
+    fields = ('username','password','profile_pic','hood','phone_number')

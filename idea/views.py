@@ -8,3 +8,6 @@ def work(request):
 
 def welcome(request):
   return render(request, 'buyer.html')
+
+def landing(request):
+  return render(request, 'landing.html')

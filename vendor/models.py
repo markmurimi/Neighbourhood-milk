@@ -9,6 +9,8 @@ from buyer.models import Buyer
 # Create your models here.
 class Vendor_profile(models.Model):
     user = models.OneToOneField(User, on_delete = models.CASCADE)
+    username = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
     bio = models.TextField(max_length=200, blank =True)
     hood = models.CharField(max_length = 50, blank =True)
     phone_number =models.IntegerField(blank = True, null = True)

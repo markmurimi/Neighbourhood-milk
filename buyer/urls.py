@@ -11,7 +11,6 @@ urlpatterns = [
   url(r'^order/', views.order, name='order'),
   url(r'^message/', views.message, name='message'),
   url(r'^welcome/',views.welcome, name = 'welcome'),
-  url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
 if settings.DEBUG:
   urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

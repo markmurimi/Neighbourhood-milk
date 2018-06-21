@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-from .forms import UserForm, VendorProfileForm,TripPlanForm
+from .forms import UserForm, VendorProfileForm,TripPlanForm, LoginForm, SignupForm
 from .models import Vendor_profile,TripPlan
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -42,3 +42,40 @@ def profile(request, username):
 
   return render(request, 'vendor/profiles/profile.html', {"title":title, "user":user, "profile": profile})
 
+def ingia(request):
+    '''
+    View function to display a login form
+    '''
+    current_user = request.user
+
+    if request.method == 'POST':
+
+        form = LoginForm(request.POST, request.FILES)
+
+        if form.is_valid:
+            form.save()
+            post.user = current_user
+            post.save()
+            return redirect(message)
+    else:
+        form = LoginForm()
+    return render(request, 'ingia.html', {"form": form})
+
+def signup(request):
+    '''
+    View function to display a signup form
+    '''
+    current_user = request.user
+
+    if request.method == 'POST':
+
+        form = SignupForm(request.POST, request.FILES)
+
+        if form.is_valid:
+            form.save()
+            post.user = current_user
+            post.save()
+            return redirect(message)
+    else:
+        form = SignupForm()
+    return render(request, 'register.html', {"form": form})
