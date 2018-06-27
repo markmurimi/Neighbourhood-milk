@@ -46,23 +46,17 @@ def ingia(request):
     return render(request, 'login.html', {"form": form})
 
 def order(request):
-    '''
-    View function to display a form for creating an order to a logged in authenticated user
-    '''
-    current_user = request.user
-
-    if request.method == 'POST':
-
-        form = OrderForm(request.POST, request.FILES)
-
-        if form.is_valid:
-            order = form.save(commit=True)
-            order.user = current_user
-            order.save()
-            return redirect('/message')
+    if request.method == "POST":
+        form = OrderForm()
+        if form.is_valid():
+           form.save()
+           return render(request, 'payment.html')
     else:
         form = OrderForm()
-    return render(request, 'order.html', {"form": form})
+        return render(request, 'payment.html', {'form': form})
 
 def message(request):
     return render(request, 'feedback.html')
+
+def payment(request):
+    return render(request, 'payment.html')
