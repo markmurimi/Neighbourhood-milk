@@ -11,39 +11,29 @@ def signup(request):
     '''
     View function to display a form for creating a post to a logged in authenticated user
     '''
-    current_user = request.user
-
-    if request.method == 'POST':
-
+    if request.method == "POST":
         form = SignUpForm(request.POST, request.FILES)
-
         if form.is_valid():
-            post = form.save(commit=False)
-            post.user = current_user
-            post.save()
-            return redirect(buyer)
+           form.save()
+           return render(request, 'buyer.html')
     else:
         form = SignUpForm()
-    return render(request, 'signup.html', {"form": form})
+        return render(request, 'signup.html', {'form': form})
+
 
 def ingia(request):
     '''
     View function to display a login form
     '''
-    current_user = request.user
-
-    if request.method == 'POST':
-
-        form = LoginForm(request.POST, request.FILES)
-
-        if form.is_valid:
-            form.save()
-            post.user = current_user
-            post.save()
-            return redirect(message)
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+           form.save()
+           return render(request, 'buyer.html')
     else:
         form = LoginForm()
-    return render(request, 'login.html', {"form": form})
+        return render(request, 'ingia.html', {'form': form})
+
 
 def order(request):
     if request.method == "POST":
