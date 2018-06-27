@@ -47,13 +47,13 @@ def ingia(request):
 
 def order(request):
     if request.method == "POST":
-        form = OrderForm()
+        form = OrderForm(request.POST)
         if form.is_valid():
            form.save()
            return render(request, 'payment.html')
     else:
         form = OrderForm()
-        return render(request, 'payment.html', {'form': form})
+        return render(request, 'order.html', {'form': form})
 
 def message(request):
     return render(request, 'feedback.html')
