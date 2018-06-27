@@ -4,14 +4,14 @@
 
 <!-- Content block -->
 {% block content %}
-{% include "navbar6.html" %}
+{% include "navbar5.html" %}
 <body style="background-image: url('https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&h=350');color:white;font-size:25px;font-family: 'Song Myung', serif;">
 <div class="container">
-    <h1>Already have an account <a href="/buyer/ingia">Log In</a></h1>
+
     <div class="col-md-8 col-lg-8">
-        <form style="margin:10%;font-size:25px;"action="/buyer/signup/" method="post" enctype="multipart/form-data">
+        <form style="margin:10%;font-size:25px;"action="/buyer/ingia/" method="post" enctype="multipart/form-data">
             {% csrf_token %} {% bootstrap_form form %}
-            <input type="submit" class="btn btn-success btn-lg" value="Sign Up">
+            <input type="submit" class="btn btn-success btn-lg" value="Log In">
         </form>
         
     </div>

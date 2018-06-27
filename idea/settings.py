@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'idea.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hood',
+        'NAME': 'hoodie',
         'USER': 'sean',
         'PASSWORD':'Aggreyomondi90',
     }

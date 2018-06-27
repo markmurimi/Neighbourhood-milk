@@ -1,8 +1,40 @@
-{% extends 'buyer/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-<h1>Welcome</h1>
+<body style="background-image:url('https://images.pexels.com/photos/884452/pexels-photo-884452.jpeg?auto=compress&cs=tinysrgb&h=350')">
+{% include "navbar2.html" %}
+{% for profiles_item in profiles %}
+    <div class="container">
+        <h1>Welcome {{ profiles_item.bio }}</h1>
+    </div>
+{% empty %}
+<style>
+    .button {
+font-family: 'Pacifico', cursive;
+border: none;
+color: #F15A29;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 25px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
 
-</div>
+.button1 {
+background-color: white;
+color: #F15A29;
+border: 2px solid #F15A29;
+}
+</style>
+    <div style="text-align:center;" class="container">
+        <h1 style="font-family: 'Pacifico', cursive;color:white;text-decoration:underline;">Welcome.</h1>
+        <div style="opacity:0.7;padding:5%;"class="well">
+            <h1 style="font-family: 'Song Myung', serif;">Would you like to order fresh milk using our website? Welcome to the Buyer's section of the application where you can place orders to a certain vendor and milk will be delivered to your desired location around the neighbourhood or even better right at your doorstep.</h1>
+            <a href="/buyer/order"><button class="button button1"> Order</button></a>
+        </div>
+    </div>
+{% endfor %}
+</body>
 {% endblock %}

@@ -7,10 +7,10 @@ app_name = 'vendor'
 
 urlpatterns = [
   url(r'^vendor',views.vendor, name = 'vendor'),
-  url(r'^accounts/', include('registration.backends.simple.urls')),
+  url(r'^signup/', views.signup, name='signup'),
+  url(r'^ingia/', views.ingia, name='/ingia'),
   url(r'^profile/(?P<username>[-_\w.]+)/$', views.profile, name='profile'),
   url(r'^profile/(?P<username>[-_\w.]+)/edit/$', views.update_profile, name='edit'),
-  url(r'^buyer_profile/(\d+)/$', views.buyer_profile, name='buyer_profile'),
-]
+  ]
 if settings.DEBUG:
   urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
