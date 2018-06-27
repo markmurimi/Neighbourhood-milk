@@ -25,6 +25,9 @@ class Order(models.Model):
   location = models.CharField(max_length=30)
   phone_number = models.CharField(max_length=30)
 
+  def __str__(self):
+    return self.username
+    
   @classmethod
   def get_orders(cls):
     orders = Order.objects.all()
