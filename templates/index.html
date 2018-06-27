@@ -77,6 +77,10 @@ border: 2px solid #F15A29;
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+footer{
+  background-color: #e7e7e7;
+  padding-left: 200px;
+}
         </style>
         <body style="background-image:url('https://images.pexels.com/photos/301378/pexels-photo-301378.jpeg?auto=compress&cs=tinysrgb&h=350');">
         <div class="container-fluid" style="margin-top:-1.4%;"> 
@@ -91,13 +95,13 @@ border: 2px solid #F15A29;
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="https://images.pexels.com/photos/250696/pexels-photo-250696.jpeg?auto=compress&cs=tinysrgb&h=350" style="height:650px;width:200vh;">
+                <img src="/static/images/post1.png" style="height:650px;width:200vh;">
               </div>
               <div class="item">
-                <img src="/static/images/maziwa.jpeg"style="height:650px;width:200vh;">
+                <img src="/static/images/post2.png"style="height:650px;width:200vh;">
               </div>
               <div class="item">
-                <img src="/static/images/maziwa.jpeg"style="height:650px;width:200vh;">
+                <img src="/static/images/post3.png"style="height:650px;width:200vh;">
               </div>
               
             </div>
@@ -109,7 +113,7 @@ border: 2px solid #F15A29;
             <div class="row">
                 <div  class="col-md-6 bg-1">
                     <div class="fasts">
-                        <img src="/static/images/buyer.jpg"  class="img-responsive" alt="fastfood">
+                        <img src="/static/images/buyermain.png"  class="img-responsive" alt="fastfood">
                         
                     </div>
                 </div>
@@ -134,7 +138,7 @@ border: 2px solid #F15A29;
             </div>
                 <div class="col-md-6 bg-1">
                     <div class="fasts">
-                        <img src="/static/images/vendor.jpg"  class="img-responsive" style="display:inline" alt="fastfood" width="" height="">
+                        <img src="/static/images/vendor.png"  class="img-responsive"style="height:420px;width:630px;" style="display:inline" alt="fastfood" width="" height="">
                         
                     </div>
                 </div>
@@ -145,7 +149,7 @@ border: 2px solid #F15A29;
           <div class="row">
               <div class="col-md-6 bg-1">
                   <div class="fasts">
-                      <img src="/static/images/packaging.jpg"  class="img-responsive" style="display:inline" alt="fastfood" width="" height="">
+                      <img src="/static/images/packaging2.jpg" style="height:430px;width:660px;" class="img-responsive" style="display:inline" alt="fastfood" width="" height="">
                       
                   </div>
               </div>
@@ -158,8 +162,33 @@ border: 2px solid #F15A29;
               </div>
           </div>
       </div>
-      <div style="padding:3%;padding-top:0%;"class="container-fluid">
-        <h1 style="font-family: 'Pacifico', cursive;color:white;font-size:50px;">Contact Us.</h1>
-      </div>
+      <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>Location</h3>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Nairobi,Kenya</p>
+      
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Around the Web</h3>
+                            <ul class="list-inline">
+                               <li>
+                                    <a href="https://plus.google.com/u/1/100792989225910579289" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/dj_seanizell" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/enock-omondi-756070105/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+      
+                    </div>
+                </div>
+            </div>
         </body>
 {% endblock %}

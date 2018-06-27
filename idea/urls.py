@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^$', views.landing, name = 'landing'),
+    url(r'^about/$', views.about, name = 'about'),
+    url(r'^contact/$', views.contact, name = 'contact'),
     url(r'^index/', views.index, name = 'index'),
     url(r'^work/', views.work, name = 'work'),
     url(r'^logout/$', view.logout, {"next_page": '/'}),

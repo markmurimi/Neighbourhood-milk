@@ -11,3 +11,9 @@ def welcome(request):
 
 def landing(request):
   return render(request, 'landing.html')
+
+def contact(request):
+  return render(request, 'contact.html')
+
+def  about(request):
+  return render(request, 'about-us.html')

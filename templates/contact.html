@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <style>
+  /* Contact Section */
+#contact-section {
+background-color: #f6f6f6;
+}
+#contact-section h3 {
+font-size: 20px;
+font-weight: 400;
+}
+
+#contact-section i.fa {
+color: #e75700;
+font-size: 16px;
+margin-bottom: 10px;
+}
+label {
+font-size: 12px;
+font-weight: 400;
+font-family: 'Open Sans', sans-serif;
+float: left;
+}
+#contact-section .form-control {
+display: block;
+width: 100%;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 2px;
+-webkit-box-shadow: none;
+box-shadow: none;
+-webkit-transition: none;
+-o-transition: none;
+transition: none;
+}
+#contact-section .form-control:focus {
+border-color: inherit;
+outline: 0;
+-webkit-box-shadow: transparent;
+box-shadow: transparent;
+}
+#contact-section .btn {
+background: transparent;
+border: 2px solid #12dbb2;
+border-radius: 4px;
+padding: 10px 20px;
+margin-top: 20px;
+color: #0dbf9b;
+}
+#contact-section .btn:hover, #contact-section .btn:focus {
+background: #0dbf9b;
+border: 2px solid #0dbf9b;
+color: #fff;
+}
+#contact-section .text-danger {
+color: #cc3300;
+text-align: left;
+}
+.btn:active, .btn.active {
+background-image: none;
+outline: 0;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+outline: none;
+outline-offset: none;
+}
+
+  </style>
+  <body>
+    <form action="https://formspree.io/djseanizellkenya@gmail.com"
+      method="POST">
+    <input type="text" name="name" name="fullname">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
+  <!-- Contact Section -->
+<!-- <div id="contact-section" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2  style="font-family: 'Pacifico', cursive;color:#1cd2f9;font-size:50px;">Contact Us / Chat Live</h2>
+      <hr>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker"></i>
+        <p>Nairobi,<br>
+          Kenya</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o"></i>
+        <p>info@neighbourhoodmilk.co.ke</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone"></i>
+        <p> +254 123 456 798</p>
+      </div>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <h3>Leave us a message</h3>
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Start of Async Drift Code -->
+<!-- <script>
+"use strict";
+!function() {
+var t = window.driftt = window.drift = window.driftt || [];
+if (!t.init) {
+if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+var n = Array.prototype.slice.call(arguments);
+return n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+var i = document.getElementsByTagName("script")[0];
+i.parentNode.insertBefore(o, i);
+};
+}
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('wam2bsfhhgum');
+</script> --> -->
+<!-- End of Async Drift Code -->
+</body>
+{%endblock%}
