@@ -6,10 +6,12 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.db import transaction
+from buyer.models import Order
 
 # Create your views here.
 def vendor(request):
-  return render(request, 'vendor/vendor.html')
+  orders = Order.get_orders()
+  return render(request, 'vendor/vendor.html', {'orders':orders})
 
 @transaction.atomic
 def update_profile(request,username):
@@ -53,10 +55,7 @@ def ingia(request):
         form = LoginForm(request.POST, request.FILES)
 
         if form.is_valid:
-            form.save()
-            post.user = current_user
-            post.save()
-            return redirect(message)
+            return redirect('/vendor/vendor')
     else:
         form = LoginForm()
     return render(request, 'ingia.html', {"form": form})

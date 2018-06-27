@@ -24,3 +24,8 @@ class Order(models.Model):
   house_number = models.CharField(max_length=30)
   location = models.CharField(max_length=30)
   phone_number = models.CharField(max_length=30)
+
+  @classmethod
+  def get_orders(cls):
+    orders = Order.objects.all()
+    return orders

@@ -17,7 +17,7 @@ def signup(request):
 
         form = SignUpForm(request.POST, request.FILES)
 
-        if form.is_valid:
+        if form.is_valid():
             post = form.save(commit=False)
             post.user = current_user
             post.save()
@@ -56,10 +56,10 @@ def order(request):
         form = OrderForm(request.POST, request.FILES)
 
         if form.is_valid:
-            post = form.save(commit=False)
-            post.user = current_user
-            post.save()
-            return redirect(message)
+            order = form.save(commit=True)
+            order.user = current_user
+            order.save()
+            return redirect('/message')
     else:
         form = OrderForm()
     return render(request, 'order.html', {"form": form})
